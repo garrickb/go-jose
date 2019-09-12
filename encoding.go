@@ -25,7 +25,7 @@ import (
 	"math/big"
 	"regexp"
 
-	"github.com/square/go-jose/v3/json"
+	"github.com/garrickb/go-jose/v3/json"
 )
 
 var stripWhitespaceRegex = regexp.MustCompile(`\s`)
@@ -42,7 +42,7 @@ func mustSerializeJSON(value interface{}) []byte {
 	// MarshalJSON will happily serialize it as the top-level value "null". If
 	// that value is then embedded in another operation, for instance by being
 	// base64-encoded and fed as input to a signing algorithm
-	// (https://github.com/square/go-jose/issues/22), the result will be
+	// (https://github.com/garrickb/go-jose/issues/22), the result will be
 	// incorrect. Because this method is intended for known-good objects, and a nil
 	// pointer is not a known-good object, we are free to panic in this case.
 	// Note: It's not possible to directly check whether the data pointed at by an

@@ -1,4 +1,4 @@
-module github.com/square/go-jose/jose-util
+module github.com/garrickb/go-jose/jose-util
 
 go 1.12
 
@@ -11,4 +11,4 @@ require (
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 )
 
-replace github.com/square/go-jose => ../
+replace github.com/garrickb/go-jose => ../
